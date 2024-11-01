@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Price-Predict Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="price-predict.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="landing page.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+                <li><a href="dashboard.html">Data-Model Dashboard</a></li>
+                <li><a href="price-predict.html">Price-Predict Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard">
+            <form id="price">
+                <h2>Price-Predict Menu</h2>
+                <label for="citySelection">Choose a City</label>
+                <select id="city-select" name="City" onchange="LocalitySelector()">
+                    <option value="City">Select a City</option>
+                    <option value="City-1">Delhi</option>
+                    <option value="City-2">Kolkata</option>
+                    <option value="City-3">Mumbai</option>
+                    <option value="City-4">Hyderabad</option>
+                    <option value="City-5">Benguluru</option>
+                    <option value="City-6">Chennai</option>
+                </select>
+                <label for="localitySelection">Choose any Locality</label>
+                <select id="locality-select" name="Locality">
+                    <option value="locality">Select a Locality</option>
+                    <option value="locality-1">Uttam Nagar</option>
+                    <option value="locality-2">Joka</option>
+                    <option value="locality-3">Malad West</option>
+                    <option value="locality-4">Hi Tech City</option>
+                    <option value="locality-5">JP Nagar Phase-1</option>
+                    <option value="locality-6">Kolapakkam</option>
+
+                </select>
+                <label for="BHK">Choose a BHK</label>
+                <select id="BHK-select">
+                    <option value="bhk">Select a BHK</option>
+                    <option value="bhk-1">1-BHK</option>
+                    <option value="bhk-2">2-BHK</option>
+                    <option value="bhk-3">3-BHK</option>
+                    <option value="bhk-4">4-BHK</option>
+                </select>
+
+                <label for="model">Choose a Model</label>
+                <select id="model-select">
+                    <option value="model">Select a Model</option>
+                    <option value="model-1">Linear Regreesion</option>
+                    <option value="model-2">Ridge Regression</option>
+                    <option value="model-3">Decision Tree</option>
+                    <option value="model-4">Random Forest</option>
+                    <option value="model-5">Extreme Gradient Boost</option>
+                </select>
+
+                <label for="Area">Area Sq-Ft</label>
+                <input type="text" id="area-sq" name="Enter the Area-Sq Ft"><br>
+
+                <label for="Resell">Resell Value</label>
+                <input type="text" id="Resell" name="Enter the Resell Value"><br>
+
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="image-container"></div>
+            </aside>
+        </section>
+    </main>
+    <div id="output"></div>
+    <script src="price-predict.js">
+    </script>
+    <script src="output.js"></script>
+</body>
+
+</html>
